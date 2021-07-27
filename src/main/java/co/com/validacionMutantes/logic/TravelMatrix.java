@@ -7,10 +7,12 @@ package co.com.validacionMutantes.logic;
 public class TravelMatrix {
 
 	/*
-	 * @Param String[][] matrizG
-	 * 
+	 * Metodo para analizar una matriz y validar si es o no mutante
+	 * implementa los tres metodod necesario para recorrer la matriz
+	 * en forma vertical diagonal y horizontal
+	 * @Param matrizG
+	 * @Return boolean
 	 */
-
 	public boolean analyze(String[][] matrizG) {
 
 		boolean isMutant = false;
@@ -24,6 +26,11 @@ public class TravelMatrix {
 
 		return isMutant;
 	}
+	/*
+	 * metodo para recorrer matriz en forma horizontal
+	 * @Param matriz
+	 * @return array String
+	 */
 
 	private String[] horizontal(String[][] matriz) {
 		boolean finalizar = false;
@@ -65,6 +72,11 @@ public class TravelMatrix {
 		return respuesta;
 	}
 
+	/*
+	 * metodo para recorrer matriz en forma vertical
+	 * @Param matriz
+	 * @return array String
+	 */
 	private String[] vertical(String[][] matriz) {
 		int contadorRespuesta = 0;
 		String[] respuesta = null;
@@ -104,7 +116,12 @@ public class TravelMatrix {
 
 		return respuesta;
 	}
-
+	
+	/*
+	 * metodo para recorrer matriz en forma diagonal
+	 * @Param matriz
+	 * @return array String
+	 */
 	private String[] diagonal(String[][] matriz) {
 
 		String[] respuesta = null;
@@ -153,6 +170,11 @@ public class TravelMatrix {
 		return respuesta;
 	}
 
+	/*
+	 * metodo para convertir un array a string
+	 * @Param matriz
+	 * @return array String
+	 */
 	public String convertArraytoString(String[] adn) {
 
 		StringBuffer cadenaADN = new StringBuffer();

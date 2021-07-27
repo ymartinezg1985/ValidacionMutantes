@@ -16,6 +16,9 @@ import co.com.validacionMutantes.logic.BuildMatrix;
 import co.com.validacionMutantes.logic.TravelMatrix;
 import co.com.validacionMutantes.services.MutantsReportService;
 import co.com.validacionMutantes.services.MutantsServices;
+/*
+ * clase controller
+ */
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -29,6 +32,15 @@ public class MutantsController {
 	@Autowired
 	MutantsReportService mutantsReportService;
 
+	/**
+	 * End Point para validar si la cadena de adn es mutante o no
+	 * recibe el parametrt
+	 * @param adn
+	 * @return httpStatus
+	 * 
+	 *
+	 */
+	
 	@PostMapping("/mutant")
 	public ResponseEntity<String> isMutant(@RequestBody String[] adn) {
 
@@ -71,6 +83,12 @@ public class MutantsController {
 
 	}
 
+	/**
+	 * Metodo para generar un reporte de la cantidad de mutantes registrados
+	 * contra la cantidad de adn registrados
+	 * @return
+	 */
+	
 	@PostMapping("/stats")
 	public ReportADN report() {
 		ReportADN informe = null;

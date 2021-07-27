@@ -2,7 +2,9 @@ package co.com.validacionMutantes.dto;
 
 /**
  * @author Ymartinezg
- *
+ * clase creada para generar un DTO
+ * para mostrar el reporte con el ratio de mutantes 
+ * cantidad de humnao y cantidad de mutantes
  */
 
 public class ReportADN {

@@ -1,12 +1,14 @@
 package co.com.validacionMutantes.logic;
 
 public class BuildMatrix {
-
+/**
+ * Metodo para recorrer el array y convertir 
+ * cada string en un array 
+ * @param cadenas
+ * @return retorna una matriz 
+ */
 	public String[][] generatMatrix(String[] cadenas) {
 		
-
-		// String[] cadenas = {"TTGCAA", "CAGTGC", "TTATGT", "AGAAGG", "CTCCTA",
-		// "TCACTG"};
 		String[][] matrizG = new String[cadenas.length][cadenas[0].length()];
 		try {
 
